@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Test/FarbsensorTest.ino
 #include <MeAuriga.h>
+=======
+#include "MeAuriga.h"
+>>>>>>> b0ae6be2a96709ff2b7d29f8b6bbeffd974bb446:Test/FarbsensorTest/FarbsensorTest.ino
 MeColorSensor colorsensor(PORT_6);
 
 uint8_t colorresult;
@@ -45,9 +49,6 @@ void loop() {
       case BLUE:
       Serial.print("BLUE");
       break;
-      case YELLOW:
-      Serial.print("YELLOW");
-      break;
       case GREEN:
       Serial.print("GREEN");
       break;
@@ -67,4 +68,9 @@ void loop() {
     Serial.print("grayscale:");
     Serial.println(grayscale);
   }
+<<<<<<< HEAD:Test/FarbsensorTest.ino
 }
+=======
+}
+
+>>>>>>> b0ae6be2a96709ff2b7d29f8b6bbeffd974bb446:Test/FarbsensorTest/FarbsensorTest.ino
