@@ -3,11 +3,19 @@
 #include <SoftwareSerial.h>
 #include <MeAuriga.h>
 
+/**
+ * @brief Pin Ports
+ * 
+ */
 MeLineFollower linefollower_9(9);
 MeEncoderOnBoard Encoder_1(SLOT1);
 MeEncoderOnBoard Encoder_2(SLOT2);
 MeLightSensor lightsensor_12(12);
 
+/**
+ * @brief Links fahren
+ * 
+ */
 void isr_process_encoder1(void)
 {
   if(digitalRead(Encoder_1.getPortB()) == 0){
@@ -16,6 +24,11 @@ void isr_process_encoder1(void)
     Encoder_1.pulsePosPlus();
   }
 }
+
+/**
+ * @brief rechts fahren
+ * 
+ */
 void isr_process_encoder2(void)
 {
   if(digitalRead(Encoder_2.getPortB()) == 0){
@@ -24,6 +37,13 @@ void isr_process_encoder2(void)
     Encoder_2.pulsePosPlus();
   }
 }
+
+/**
+ * @brief Die Geschwindigkeiten für die einzelnen Richtungen.
+ * 
+ * @param direction 
+ * @param speed 
+ */
 void move(int direction, int speed)
 {
   int leftSpeed = 0;
@@ -45,6 +65,11 @@ void move(int direction, int speed)
   Encoder_2.setTarPWM(rightSpeed);
 }
 
+/**
+ * @brief Sekunden in Millisekunden
+ * 
+ * @param seconds 
+ */
 void _delay(float seconds) {
   if(seconds < 0.0){
     seconds = 0.0;
@@ -53,6 +78,10 @@ void _delay(float seconds) {
   while(millis() < endTime) _loop();
 }
 
+/**
+ * @brief Setup
+ * 
+ */
 void setup() {
   TCCR1A = _BV(WGM10);
   TCCR1B = _BV(CS11) | _BV(WGM12);
@@ -97,6 +126,10 @@ void _loop() {
   Encoder_2.loop();
 }
 
+/**
+ * @brief Main Loop
+ * 
+ */
 void loop() {
   _loop();
 }
