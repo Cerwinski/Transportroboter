@@ -1,3 +1,4 @@
+#include <MeAuriga.h>
 MeColorSensor colorsensor(PORT_6);
 
 uint8_t colorresult;
@@ -67,6 +68,3 @@ void loop() {
     Serial.println(grayscale);
   }
 }
-
-Farbsensor
-#include "MeOrion.h" in #include <MeAuriga.h> ändern
