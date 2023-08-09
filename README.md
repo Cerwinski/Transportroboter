@@ -1,4 +1,4 @@
-# Projekt Transportroboter in Vertiefung SS23
+# Projekt Transportroboter in Vertiefung Programmierung SS23
 
 ## Table of Contents
 1. [General Info](#general-info)
@@ -8,6 +8,9 @@
 ### General Info
 ***
 Ein Roboter der Objekte von A nach B bringt.
+Er soll das Objekt auf der Strecke greifen, mit dem Linearantrieb hochheben und anhand der Linien auf dem Boden zu dem Entladeort fahren, der rot markiert ist. 
+Am Entladeort soll er das Objekt entladen und fährt dann autonom weiter zum Zielort (blau) wo sein Prozess zu Ende ist und er stehn bleibt.
+Beim Be- und Entladen leuchtet außerdem die LED auf um zu signalisieren, dass er es Be- und Entlädt.
 
 ## Technologies
 ***
