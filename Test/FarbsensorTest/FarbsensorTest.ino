@@ -1,3 +1,4 @@
+#include "MeAuriga.h"
 MeColorSensor colorsensor(PORT_6);
 
 uint8_t colorresult;
@@ -44,9 +45,6 @@ void loop() {
       case BLUE:
       Serial.print("BLUE");
       break;
-      case YELLOW:
-      Serial.print("YELLOW");
-      break;
       case GREEN:
       Serial.print("GREEN");
       break;
@@ -68,5 +66,3 @@ void loop() {
   }
 }
 
-Farbsensor
-#include "MeOrion.h" in #include <MeAuriga.h> ändern
